@@ -27,6 +27,12 @@ In this open source project, we have prioritized the development of lightweight 
   
   result = model(image_path, save=True, conf=0.5, save_crop=False, line_width=2)
   print(result)
+  
+  print(result[0].names)         # Output the id to label map
+  print(result[0].boxes)         # Output all detected bounding boxes
+  print(result[0].boxes.xyxy)    # Output the top-left and bottom-right coordinates of all detected bounding boxes
+  print(result[0].boxes.cls)     # Output the id corresponding to the class of all detected bounding boxes
+  print(result[0].boxes.conf)    # Output the confidence of all detected bounding boxes
   ```
 
 ## III. Layout Analysis
